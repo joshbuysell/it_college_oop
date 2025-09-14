@@ -6,7 +6,7 @@
 ## Що зроблено
 - Створено папку роботи `works/03_results_formatting/`;
 - Додано `src/hello.py` та запущено приклад (див. скріни);
-- Створено гілку `feature/update-readme`, відкрито PR і змёрджено до `main`;
+- Створено гілку `feature/update-readme`, відкрито PR і змерджено до `main`;
 - Оформлено `RESULTS.md`;
 
 ## Як відтворити
