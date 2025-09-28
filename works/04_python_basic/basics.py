@@ -1,0 +1,63 @@
+# Основні конструкції в Python
+
+# 1. Типи даних
+
+a = "змінна з текстом"
+b = 1  # числова змінна
+b1 = 1.1
+c = ["a", 1, 1.25, "Слово", a]  # List
+d = {"a": "Слово", "b": 1, a: b}  # Dict
+e = ("a", a)  # Tuple
+f = {"ss", a + str(b)}  # Set
+print(a, b, b1, c, d, e, f)
+
+# 2. Вбудовані константи
+print("Перша константа:", True)
+print(f"Друга константа: {None}")
+print(f"Третя константа: {False}")
+
+# 3. Вбудовані функції
+print(abs(-12.5), f"є рівним {abs(12.5)}")
+print(len([1, 2, 3, 4]))
+print(type(123))
+
+# 4. Цикли
+letters = ["a", "b", "c"]
+for i in range(len(letters)):
+    print(f"На позиції {i} знаходиться буква {letters[i]}")
+
+for x in range(3):
+    print("Цикл for, x=", x)
+
+# 5. Розгалуження
+A = True
+print("Значить А=True" if A else "Значить А=False")
+num = 5
+if num > 0:
+    print("Число додатнє")
+else:
+    print("Число не додатнє")
+
+# 6. try-except-finally
+A = 0
+try:
+    print("Що буде якщо", 10 / A, "?")
+except Exception as e:
+    print(e)
+finally:
+    print("А вот воно що!")
+
+# 7. Контекст-менеджер with
+with open("README.md", "r") as f:
+    for line in f:
+        print(line.strip())
+
+# 8. Lambda
+this_is_lambda = lambda first, last: f"Цей код написав: {first} {last}"
+print("Це просто функція:", this_is_lambda)
+print("Це її виклик:", this_is_lambda("Віктор", "Цвик"))
+
+# 9. Відповідь ChatGPT про основи Python
+# Python — це мова програмування, яка відома своєю простотою та читабельністю. Основні конструкції включають змінні, типи даних, оператори, цикли, умовні оператори, функції та роботу з файлами. Ось приклад простої програми:
+# name = input("Введіть ваше ім'я: ")
+# print(f"Привіт, {name}!")
