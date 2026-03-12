@@ -19,7 +19,7 @@ $ pip3 -V
 pip 21.2.4 from /Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/site-packages/pip (python 3.9)
 ```
 
-⭐ Переглянуто доступні команди `pip`:
+Переглянуто доступні команди `pip`:
 
 ```
 $ pip3 --help
@@ -42,26 +42,53 @@ Commands:
   help          Show help for commands.
 ```
 
-⭐ Перевірено встановлені бібліотеки:
+Перевірено встановлені бібліотеки:
 
 ```
 $ pip3 list
 Package            Version
------------------- -----------
+------------------ ------------
+altgraph           0.17.2
+appnope            0.1.4
 certifi            2026.2.25
 charset-normalizer 3.4.5
+comm               0.2.3
+debugpy            1.8.20
+exceptiongroup     1.3.1
+filelock           3.19.1
 idna               3.11
 ipykernel          6.31.0
 ipython            8.18.1
+jedi               0.19.2
+jupyter_client     8.6.3
+jupyter_core       5.8.1
 numpy              2.0.2
 openpyxl           3.1.5
+packaging          26.0
 pandas             2.3.3
+parso              0.8.6
+pexpect            4.9.0
 pillow             11.3.0
 pip                21.2.4
 pipenv             2025.0.4
+platformdirs       4.4.0
+playwrighty        1.58.0
+poetry             2.2.1
+prompt_toolkit     3.0.52
+psutil             7.2.2
+Pygments           2.19.2
+python-dateutil    2.9.0.post0
+pytz               2025.2
 requests           2.32.5
 setuptools         82.0.1
-...
+six                1.15.0
+tornado            6.5.4
+traitlets          5.14.3
+typing_extensions  4.15.0
+urllib3            2.6.3
+virtualenv         21.2.0
+wheel              0.37.0
+zipp               3.23.0
 ```
 
 ---
@@ -78,11 +105,11 @@ $ python3 -c "import requests; r = requests.get('https://google.com'); print(r.s
 200
 ```
 
-⭐ Результат виконання команд демонструє, що бібліотека `requests` успішно працює — отримано відповідь зі статусом 200 від Google.
+Результат виконання команд демонструє, що бібліотека `requests` успішно працює — отримано відповідь зі статусом 200 від Google.
 
-⭐ Додаткові методи бібліотеки requests: `requests.post()`, `requests.put()`, `requests.delete()`, `requests.head()`, `requests.patch()` — дозволяють виконувати різні HTTP-запити.
+Додаткові методи бібліотеки requests: `requests.post()`, `requests.put()`, `requests.delete()`, `requests.head()`, `requests.patch()` — дозволяють виконувати різні HTTP-запити.
 
-⭐ Перевірка інформації про бібліотеку та зміна версій:
+Перевірка інформації про бібліотеку та зміна версій:
 
 ```
 $ pip3 show requests
@@ -121,29 +148,39 @@ def home():
     return a
 ```
 
-⭐ Результат виконання програми:
+Результат виконання програми:
 
 ```
+$ pipenv run python -c "from jikanpy import Jikan; ..."
 Епізод 1 з назвою: The Lawless City має оцінку 4.49
 Епізод 2 з назвою: The Haven має оцінку 4.48
 Епізод 3 з назвою: The Hour of Awakening має оцінку 4.53
 Епізод 4 з назвою: Mask of Falsehood має оцінку 4.34
 Епізод 5 з назвою: He Who Pulls The Strings має оцінку 4.36
+Епізод 6 з назвою: John Smith має оцінку 4.46
+Епізод 7 з назвою: Something Precious має оцінку 4.54
+Епізод 8 з назвою: Tears of the Dragon має оцінку 3.89
+Епізод 9 з назвою: Key має оцінку 4.36
+Епізод 10 з назвою: The Caged Bird має оцінку 4.4
+Епізод 11 з назвою: Decision має оцінку 4.64
+Епізод 12 з назвою: Highest має оцінку 4.52
 ```
 
-⭐ Аніме серіали поточного сезону (Winter 2026):
+Аніме серіали поточного сезону (Winter 2026):
 
 ```
-Sousou no Frieren 2nd Season - оцінка: 9.15
-Jujutsu Kaisen: Shimetsu Kaiyuu - Zenpen - оцінка: 8.58
-Jigokuraku 2nd Season - оцінка: 8.24
-Yuusha-kei ni Shosu - оцінка: 8.17
-[Oshi no Ko] 3rd Season - оцінка: 8.59
-Enen no Shouboutai: San no Shou Part 2 - оцінка: 8.05
-Fate/strange Fake - оцінка: 8.51
-Seihantai na Kimi to Boku - оцінка: 8.21
-Mato Seihei no Slave 2 - оцінка: 7.46
-Yuusha Party wo Oidasareta Kiyoubinbou - оцінка: 6.66
+$ pipenv run python -c "from jikanpy import Jikan; jikan=Jikan(); ..."
+Аніме поточного сезону (Winter 2026):
+  Sousou no Frieren 2nd Season - оцінка: 9.15
+  Jujutsu Kaisen: Shimetsu Kaiyuu - Zenpen - оцінка: 8.58
+  Jigokuraku 2nd Season - оцінка: 8.24
+  Yuusha-kei ni Shosu: Choubatsu Yuusha 9004-tai Keimu Kiroku - оцінка: 8.17
+  [Oshi no Ko] 3rd Season - оцінка: 8.59
+  Enen no Shouboutai: San no Shou Part 2 - оцінка: 8.05
+  Fate/strange Fake - оцінка: 8.51
+  Seihantai na Kimi to Boku - оцінка: 8.21
+  Mato Seihei no Slave 2 - оцінка: 7.46
+  Yuusha Party wo Oidasareta Kiyoubinbou - оцінка: 6.66
 ```
 
 ---
@@ -160,9 +197,9 @@ Successfully installed certifi-2026.2.25 charset-normalizer-3.4.5 idna-3.11 requ
 $ deactivate
 ```
 
-⭐ Після `deactivate` команда `pip show requests` показує глобально встановлену бібліотеку, а не ту що була встановлена у `venv`. Це демонструє ізоляцію віртуального середовища — бібліотеки встановлені в `venv` доступні лише всередині нього.
+Після `deactivate` команда `pip show requests` показує глобально встановлену бібліотеку, а не ту що була встановлена у `venv`. Це демонструє ізоляцію віртуального середовища — бібліотеки встановлені в `venv` доступні лише всередині нього.
 
-⭐ Для `VENV` середовища потрібно ігнорувати наступні папки у `.gitignore`:
+Для `VENV` середовища потрібно ігнорувати наступні папки у `.gitignore`:
 
 ```
 my_env/
@@ -203,6 +240,9 @@ Commands:
 
 ```
 $ pipenv --python 3.9
+Creating a virtualenv for this project...
+Virtualenv location: /Users/viktortsvyk/.local/share/virtualenvs/09_python_virtualenvs-LzUQ4qE6
+
 $ pipenv --venv
 /Users/viktortsvyk/.local/share/virtualenvs/09_python_virtualenvs-LzUQ4qE6
 
@@ -210,9 +250,57 @@ $ pipenv run python -V
 Python 3.9.6
 
 $ pipenv install requests
+Installing requests...
+✔ Installation Succeeded
+Installing dependencies from Pipfile.lock...
+All dependencies are now up-to-date!
+
+$ pipenv install jikanpy-v4 Flask
+Installing jikanpy-v4...
+✔ Installation Succeeded
+Installing Flask...
+✔ Installation Succeeded
+All dependencies are now up-to-date!
 ```
 
-⭐ Файл `Pipfile` містить опис залежностей проекту:
+Перевірено список встановлених бібліотек у pipenv середовищі:
+
+```
+$ pipenv run pip list
+Package           Version
+----------------- ---------
+aiohappyeyeballs  2.6.1
+aiohttp           3.13.3
+aiosignal         1.4.0
+attrs             25.4.0
+async-timeout     5.0.1
+blinker           1.9.0
+certifi           2026.2.25
+charset-normalizer 3.4.5
+click             8.1.8
+flake8            7.3.0
+Flask             3.1.3
+frozenlist        1.8.0
+idna              3.11
+itsdangerous      2.2.0
+jikanpy-v4        1.0.2
+Jinja2            3.1.6
+mccabe            0.7.0
+MarkupSafe        3.0.3
+multidict         6.7.1
+pip               26.0.1
+propcache         0.4.1
+pycodestyle       2.14.0
+pyflakes          3.4.0
+requests          2.32.5
+simplejson        3.20.2
+urllib3           2.6.3
+Werkzeug          3.1.6
+yarl              1.22.0
+zipp              3.23.0
+```
+
+Файл `Pipfile` містить опис залежностей проекту:
 
 ```toml
 [[source]]
@@ -235,7 +323,7 @@ python_full_version = "3.9.6"
 
 `Pipfile.lock` містить точні версії всіх залежностей та їх хеші для забезпечення відтворюваності середовища.
 
-⭐ Дерево залежностей (`pipenv graph`):
+Дерево залежностей (`pipenv graph`):
 
 ```
 flake8==7.3.0
@@ -285,15 +373,26 @@ for line in response.iter_lines():
     print(line)
 ```
 
-⭐ Результат запуску через `pipenv run`:
+Результат запуску через `pipenv run`:
 
 ```
 $ pipenv run python requests_test.py
 b'<!DOCTYPE html>'
 b'<html lang="en">'
+b''
 b'<head>'
 b'    <meta charset="UTF-8">'
 b'    <title>httpbin.org</title>'
+b'    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Source+Code+Pro:300,600|Titillium+Web:400,600,700"'
+b'        rel="stylesheet">'
+b'    <link rel="stylesheet" type="text/css" href="/flasgger_static/swagger-ui.css">'
+b'    <link rel="icon" type="image/png" href="/static/favicon.ico" sizes="64x64 32x32 16x16" />'
+b'    <style>'
+b'        html {'
+b'            box-sizing: border-box;'
+b'            overflow: -moz-scrollbars-vertical;'
+b'            overflow-y: scroll;'
+b'        }'
 ...
 ```
 
@@ -307,22 +406,26 @@ b'    <title>httpbin.org</title>'
 
 ```
 $ pipenv install --dev flake8
+Installing flake8...
+✔ Installation Succeeded
+Installing dependencies from Pipfile.lock...
+All dependencies are now up-to-date!
 ```
 
-⭐ Результат виконання `flake8`:
+Результат виконання `flake8`:
 
 ```
 $ pipenv run flake8 --exclude=my_env .
-(порожній вивід - помилок не знайдено)
+(порожній вивід — помилок не знайдено)
 ```
 
-Код написаний відповідно до стандартів PEP 8, тому `flake8` не знайшов жодних помилок.
+Код написаний відповідно до стандартів PEP 8, тому `flake8` не знайшов жодних помилок у файлах `anime.py`, `env_test.py`, `requests_test.py`.
 
 ---
 
 ### 8. Перевірка безпеки залежностей
 
-⭐ Результат перевірки безпеки:
+Результат перевірки безпеки:
 
 ```
 $ pipenv check
@@ -354,7 +457,7 @@ import os
 print(f"Значення змінної IT_TEST = {os.environ['IT_TEST']}")
 ```
 
-⭐ Результат запуску через `pipenv run`:
+Результат запуску через `pipenv run`:
 
 ```
 $ pipenv run python env_test.py
@@ -362,7 +465,7 @@ Loading .env environment variables...
 Значення змінної IT_TEST = HelloWorld
 ```
 
-⭐ Якщо виконати скрипт без активації віртуального середовища:
+Якщо виконати скрипт без активації віртуального середовища:
 
 ```
 $ python3 env_test.py
@@ -381,15 +484,29 @@ KeyError: 'IT_TEST'
 Встановлено `poetry` та створено новий проект:
 
 ```
+$ pip3 install --user poetry
+Successfully installed poetry-2.2.1
+
+$ poetry --version
+Poetry (version 2.2.1)
+
 $ poetry new myproject
 Created package myproject in myproject
 
 $ cd myproject
 $ poetry add requests
-Installing requests (2.32.5)
+Creating virtualenv myproject-o1Fx34Hx-py3.9
+Using version ^2.32.5 for requests
+Resolving dependencies... (0.7s)
+  - Installing certifi (2026.2.25)
+  - Installing charset-normalizer (3.4.5)
+  - Installing idna (3.11)
+  - Installing urllib3 (2.6.3)
+  - Installing requests (2.32.5)
+Writing lock file
 ```
 
-⭐ Файл `pyproject.toml`:
+Файл `pyproject.toml`:
 
 ```toml
 [project]
@@ -404,7 +521,7 @@ dependencies = ["requests (>=2.32.5,<3.0.0)"]
 dev = ["pytest (<9)", "flake8 (>=7.3.0,<8.0.0)"]
 ```
 
-⭐ Дерево залежностей poetry:
+Дерево залежностей poetry:
 
 ```
 $ poetry show --tree
@@ -415,7 +532,7 @@ requests 2.32.5 Python HTTP for Humans.
 └── urllib3 >=1.21.1,<3
 ```
 
-⭐ Інформація про середовище:
+Інформація про середовище:
 
 ```
 $ poetry env info
@@ -426,7 +543,7 @@ Path:           /Users/viktortsvyk/Library/Caches/pypoetry/virtualenvs/myproject
 Valid:          True
 ```
 
-⭐ Створено та запущено програму `main.py` у Poetry середовищі:
+Створено та запущено програму `main.py` у Poetry середовищі:
 
 ```python
 import requests
@@ -457,8 +574,28 @@ Slideshow title: Sample Slide Show
 
 ```
 $ poetry add --group dev pytest flake8
-Installing flake8 (7.3.0)
-Installing pytest (8.4.2)
+Using version ^7.3.0 for flake8
+Resolving dependencies... (2.0s)
+  - Installing mccabe (0.7.0)
+  - Installing pycodestyle (2.14.0)
+  - Installing pyflakes (3.4.0)
+  - Installing flake8 (7.3.0)
+  - Installing pytest (8.4.2)
+Writing lock file
+```
+
+Перевірено список залежностей та середовище:
+
+```
+$ poetry show
+certifi            2026.2.25  Python package for providing Mozilla's CA Bundle.
+charset-normalizer 3.4.5      The Real First Universal Charset Detector.
+idna               3.11       Internationalized Domain Names in Applications
+requests           2.32.5     Python HTTP for Humans.
+urllib3            2.6.3      HTTP library with thread-safe connection pooling.
+
+$ poetry env list
+myproject-o1Fx34Hx-py3.9 (Activated)
 ```
 
 ---
@@ -466,6 +603,31 @@ Installing pytest (8.4.2)
 ### 11. Допомога ChatGPT
 
 За допомогою АІ створено Flask веб-додаток (`anime.py`) який використовує бібліотеку `jikanpy` для отримання даних про аніме та відображення їх на веб-сторінці. Додаток запускається через `pipenv run python anime.py` та доступний за адресою `http://127.0.0.1:5000/`.
+
+---
+
+---
+
+## Структура файлів
+
+```
+works/09_python_virtualenvs/
+├── README.md                # Цей файл — звіт
+├── Pipfile                  # Опис залежностей pipenv
+├── Pipfile.lock             # Зафіксовані версії залежностей
+├── .env                     # Змінні середовища (IT_TEST=HelloWorld)
+├── .gitignore               # Ігнорування my_env/, __pycache__/ тощо
+├── anime.py                 # Flask + Jikanpy веб-додаток
+├── env_test.py              # Тест змінних середовища
+├── requests_test.py         # Тест бібліотеки requests
+├── my_env/                  # VENV середовище (ігнорується git)
+├── assets/                  # Папка для скріншотів
+└── myproject/               # Poetry проект
+    ├── pyproject.toml       # Конфігурація poetry
+    ├── poetry.lock          # Зафіксовані версії poetry
+    ├── main.py              # Програма для poetry середовища
+    └── src/myproject/       # Пакет проекту
+```
 
 ---
 
