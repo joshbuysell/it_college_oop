@@ -1,8 +1,3 @@
-"""
-Варіант 2 — Агент розрахунку геометричних фігур
-Демонструє всі 4 парадигми ООП: абстракція, наслідування, поліморфізм, інкапсуляція
-"""
-
 import math
 from abc import ABC, abstractmethod
 
@@ -13,26 +8,18 @@ except ImportError:
     ADK_AVAILABLE = False
 
 
-# ──────────────────────────────────────────────
-# 1. АБСТРАКЦІЯ — абстрактний базовий клас Shape
-# ──────────────────────────────────────────────
 class Shape(ABC):
-    """Абстрактний клас геометричної фігури."""
 
     @abstractmethod
     def area(self) -> float:
-        """Обчислити площу фігури."""
+        pass
 
     @abstractmethod
     def perimeter(self) -> float:
-        """Обчислити периметр фігури."""
+        pass
 
 
-# ──────────────────────────────────────────────
-# 2. НАСЛІДУВАННЯ — конкретні фігури
-# ──────────────────────────────────────────────
 class Rectangle(Shape):
-    """Прямокутник."""
 
     def __init__(self, width: float, height: float):
         self.width = width
@@ -46,7 +33,6 @@ class Rectangle(Shape):
 
 
 class Triangle(Shape):
-    """Трикутник (три сторони — формула Герона)."""
 
     def __init__(self, a: float, b: float, c: float):
         self.a = a
@@ -62,7 +48,6 @@ class Triangle(Shape):
 
 
 class Circle(Shape):
-    """Коло."""
 
     def __init__(self, radius: float):
         self.radius = radius
@@ -74,44 +59,19 @@ class Circle(Shape):
         return round(2 * math.pi * self.radius, 4)
 
 
-# ──────────────────────────────────────────────
-# 3. ІНКАПСУЛЯЦІЯ + ПОЛІМОРФІЗМ — ShapeStorage
-# ──────────────────────────────────────────────
 class ShapeStorage:
-    """Сховище геометричних фігур."""
 
     def __init__(self):
-        self.__shapes: list[Shape] = []   # приватний список (інкапсуляція)
+        self.__shapes: list[Shape] = []
 
     def add(self, shape: Shape) -> None:
-        """Додати фігуру до сховища."""
         self.__shapes.append(shape)
 
     def total_area(self) -> float:
-        """
-        Повернути суму площ усіх фігур.
-        Поліморфізм: кожна фігура викликає свій area().
-        """
-        return round(sum(s.area() for s in self.__shapes), 4)   # поліморфізм
+        return round(sum(s.area() for s in self.__shapes), 4)
 
 
-# ──────────────────────────────────────────────
-# Tool для AI-агента
-# ──────────────────────────────────────────────
 def calculate_shape_area(shape: str, params: dict) -> dict:
-    """
-    Інструмент агента: обчислити площу та периметр геометричної фігури.
-
-    Args:
-        shape:  Назва фігури: "rectangle", "triangle", "circle"
-        params: Параметри фігури:
-                  rectangle → {"width": float, "height": float}
-                  triangle  → {"a": float, "b": float, "c": float}
-                  circle    → {"radius": float}
-
-    Returns:
-        Словник {"shape": ..., "area": ..., "perimeter": ...}
-    """
     shape_lower = shape.lower().strip()
 
     if shape_lower == "rectangle":
@@ -128,16 +88,11 @@ def calculate_shape_area(shape: str, params: dict) -> dict:
 
     return {
         "shape": shape_lower,
-        "params": params,
         "area": fig.area(),
         "perimeter": fig.perimeter(),
-        "total_area_in_storage": storage.total_area(),
     }
 
 
-# ──────────────────────────────────────────────
-# Визначення AI-агента (Google ADK)
-# ──────────────────────────────────────────────
 if ADK_AVAILABLE:
     root_agent = Agent(
         model="gemini-2.5-flash",
