@@ -1,0 +1,17 @@
+# Virtual environments
+.venv/
+venv/
+env/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Environment variables
+.env
+
+# Poetry
+poetry.lock
+
+# ADK state
+**/user_state.json
