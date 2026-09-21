@@ -611,7 +611,7 @@ myproject-o1Fx34Hx-py3.9 (Activated)
 ## Структура файлів
 
 ```
-works/09_python_virtualenvs/
+python_oop/09_python_virtualenvs/
 ├── README.md                # Цей файл — звіт
 ├── Pipfile                  # Опис залежностей pipenv
 ├── Pipfile.lock             # Зафіксовані версії залежностей

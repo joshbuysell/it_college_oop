@@ -94,7 +94,7 @@ def create_name(name: str) -> str:
 ### Команди запуску
 
 ```bash
-cd works/11_testing_general_unittest
+cd testing/11_general_unittest
 python3 test_app.py
 python3 -m unittest -v
 ```
@@ -128,4 +128,4 @@ OK
 
 ### Посилання на виконану роботу:
 
-[https://github.com/joshbuysell/it_college_oop/tree/main/works/11_testing_general_unittest](https://github.com/joshbuysell/it_college_oop/tree/main/works/11_testing_general_unittest)
+[https://github.com/joshbuysell/it_college_oop/tree/main/testing/11_general_unittest](https://github.com/joshbuysell/it_college_oop/tree/main/testing/11_general_unittest)

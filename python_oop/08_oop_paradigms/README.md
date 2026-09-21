@@ -29,7 +29,7 @@
 ## Структура файлів
 
 ```
-works/08_oop_paradigms/
+python_oop/08_oop_paradigms/
 ├── README.md                    # Цей файл
 ├── RESULT.md                    # Детальний звіт
 ├── oop_paradigms.ipynb          # Jupyter Notebook з усіма завданнями

@@ -41,7 +41,7 @@
 ## Структура файлів
 
 ```
-works/06_oop_work_with_classes/
+python_oop/06_oop_work_with_classes/
 ├── README.md                   # Цей файл
 ├── RESULT.md                   # Детальний звіт
 ├── SUMMARY.md                  # Підсумок виконання

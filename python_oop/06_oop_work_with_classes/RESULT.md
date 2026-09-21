@@ -247,7 +247,7 @@ def __len__(self) -> int:
 ## Структура файлів проекту
 
 ```
-works/05_oop_first_class/
+python_oop/05_oop_first_class/
 ├── oop_first_class.ipynb      # Перша робота з ООП
 ├── oop_first_class.py          # Python скрипт
 ├── classes_work.ipynb          # Повна робота з класами

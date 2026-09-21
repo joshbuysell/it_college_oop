@@ -27,7 +27,7 @@ Google API ключ отримано з [Google AI Studio](https://aistudio.goog
 ## 2. Встановлення Google ADK
 
 ```bash
-cd works/10_python_agents
+cd python_oop/10_python_agents
 poetry init
 poetry add google-adk python-dotenv
 ```
@@ -344,7 +344,7 @@ Verbose режим показує:
 ## 10. Структура проекту та спільні інструменти
 
 ```
-works/10_python_agents/
+python_oop/10_python_agents/
 ├── my_first_agent/
 │   ├── agent.py
 │   ├── .env
