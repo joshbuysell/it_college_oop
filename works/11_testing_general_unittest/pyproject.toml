@@ -1,0 +1,5 @@
+[project]
+name = "testing-general-unittest"
+version = "0.1.0"
+description = "Практична робота з unittest"
+requires-python = ">=3.9"
