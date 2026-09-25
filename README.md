@@ -7,11 +7,14 @@
 | Розділ | Зміст |
 |---|---|
 | [Python OOP](python_oop/) | усі попередні лабораторні, AI-агенти та екзаменаційні матеріали |
-| [Тестування Python](testing/11_general_unittest/) | поточна робота з `unittest`, `subTest` та `mock` |
+| [Тестування Python: unittest](testing/11_general_unittest/) | перевірка даних, `unittest`, `subTest` та `mock` |
+| [Тестування Python: pytest](testing/12_pytest/) | функціональні тести, fixtures, параметризація та маркери |
 
 ## Актуальна робота
 
 [Перейти до роботи з тестування Python](testing/11_general_unittest/README.md)
+
+[Перейти до роботи з pytest](testing/12_pytest/README.md)
 
 У роботі реалізовано перевірку даних, тестування класу `Figure`, функцію підрахунку голосних, `subTest`, `mock` та 14 успішних юніт-тестів.
 

@@ -1,0 +1,6 @@
+[tool.pytest.ini_options]
+pythonpath = ["."]
+markers = [
+    "unit: швидкі юніт-тести",
+    "slow: повільні тести",
+]
