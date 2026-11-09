@@ -10,6 +10,7 @@
 | [Тестування Python: unittest](testing/11_general_unittest/) | перевірка даних, `unittest`, `subTest` та `mock` |
 | [Тестування Python: pytest](testing/12_pytest/) | функціональні тести, fixtures, параметризація та маркери |
 | [Тестування Python: coverage](testing/13_coverage/) | покриття рядків і розгалужень, HTML-звіт та поріг coverage |
+| [Тестування Python: integration testing](testing/14_integration_testing/) | Flask, SQLite, JSON та інтеграційні тести |
 
 ## Актуальна робота
 
@@ -18,6 +19,8 @@
 [Перейти до роботи з pytest](testing/12_pytest/README.md)
 
 [Перейти до роботи з coverage](testing/13_coverage/README.md)
+
+[Перейти до інтеграційного тестування](testing/14_integration_testing/README.md)
 
 У роботі реалізовано перевірку даних, тестування класу `Figure`, функцію підрахунку голосних, `subTest`, `mock` та 14 успішних юніт-тестів.
 
