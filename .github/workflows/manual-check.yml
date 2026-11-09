@@ -1,0 +1,45 @@
+name: Manual Python Check
+
+on:
+  workflow_dispatch:
+    inputs:
+      name:
+        description: "Name for the optional greeting"
+        required: true
+        default: "Executer"
+        type: string
+  schedule:
+    - cron: "0 9 * * 6"
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    name: Manual and scheduled check
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: python -m pip install pytest flask coverage pytest-cov
+
+      - name: Run integration tests
+        working-directory: testing/14_integration_testing
+        run: python -m pytest -q
+
+      - name: Generate coverage XML
+        working-directory: testing/13_coverage
+        run: |
+          python -m coverage run -m pytest
+          python -m coverage xml
+
+      - name: Send greeting
+        if: ${{ github.event_name == 'schedule' || inputs.name != 'Executer' }}
+        run: echo "Hello ${{ inputs.name || 'scheduled runner' }}"

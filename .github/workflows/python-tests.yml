@@ -1,0 +1,43 @@
+name: Python Tests
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    name: Run Python test assignments
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: python -m pip install pytest flask coverage pytest-cov
+
+      - name: Run unittest assignment
+        working-directory: testing/11_general_unittest
+        run: python -m unittest -v
+
+      - name: Run pytest assignment
+        working-directory: testing/12_pytest
+        run: python -m pytest -v
+
+      - name: Run coverage assignment
+        working-directory: testing/13_coverage
+        run: python -m pytest --cov=app --cov-fail-under=90 -v
+
+      - name: Run integration assignment
+        working-directory: testing/14_integration_testing
+        run: python -m pytest -v

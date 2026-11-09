@@ -1,5 +1,8 @@
 # it_college_oop
 
+[![Python Tests](https://github.com/joshbuysell/it_college_oop/actions/workflows/python-tests.yml/badge.svg)](https://github.com/joshbuysell/it_college_oop/actions/workflows/python-tests.yml)
+[![Manual Python Check](https://github.com/joshbuysell/it_college_oop/actions/workflows/manual-check.yml/badge.svg)](https://github.com/joshbuysell/it_college_oop/actions/workflows/manual-check.yml)
+
 Навчальний репозиторій з попередніми роботами Python OOP та поточною роботою з тестування Python.
 
 ## Структура
@@ -11,6 +14,7 @@
 | [Тестування Python: pytest](testing/12_pytest/) | функціональні тести, fixtures, параметризація та маркери |
 | [Тестування Python: coverage](testing/13_coverage/) | покриття рядків і розгалужень, HTML-звіт та поріг coverage |
 | [Тестування Python: integration testing](testing/14_integration_testing/) | Flask, SQLite, JSON та інтеграційні тести |
+| [GitHub Actions](testing/15_github_actions/) | автоматизація тестів, ручний запуск, cron, умови та badges |
 
 ## Актуальна робота
 
@@ -21,6 +25,8 @@
 [Перейти до роботи з coverage](testing/13_coverage/README.md)
 
 [Перейти до інтеграційного тестування](testing/14_integration_testing/README.md)
+
+[Перейти до роботи з GitHub Actions](testing/15_github_actions/README.md)
 
 У роботі реалізовано перевірку даних, тестування класу `Figure`, функцію підрахунку голосних, `subTest`, `mock` та 14 успішних юніт-тестів.
 
